@@ -28,9 +28,9 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
           action: "upload"
           ###### Repository/Build Configurations ######
-          app_location: "Frontend/html"  # Apunta al directorio donde está tu index.html
-          api_location: ""  # Opcional si no tienes una API
-          output_location: ""  # Déjalo vacío si ya es contenido estático
+          app_location: "./Frontend"  # Asegura que toda la carpeta Frontend se incluya
+          api_location: ""  # No usamos API, dejar en blanco
+          output_location: ""  # Mantener en blanco porque no hay pasos de construcción
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
